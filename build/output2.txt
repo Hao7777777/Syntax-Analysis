@@ -1,0 +1,613 @@
+Starting Symbol:
+E'
+
+Non Terminal Symbols:
+E' F E T 
+
+Terminal Symbols:
+) / ( + num - * 
+
+Production Rules:
+E' -> E 
+F -> ( E ) | num 
+E -> E + T | E - T | T 
+T -> T * F | T / F | F 
+
+LR1 DFA:
+Item Set 0:
+F -> · num , -
+F -> · num , +
+F -> · num , $
+F -> · num , /
+F -> · num , *
+F -> · ( E ) , -
+F -> · ( E ) , +
+F -> · ( E ) , $
+F -> · ( E ) , /
+F -> · ( E ) , *
+E -> · T , $
+E -> · T , -
+E -> · T , +
+E' -> · E , $
+E -> · E - T , -
+E -> · E + T , -
+E -> · E - T , $
+E -> · E + T , $
+E -> · E + T , +
+E -> · E - T , +
+T -> · T / F , *
+T -> · T * F , *
+T -> · T / F , /
+T -> · T * F , /
+T -> · T / F , $
+T -> · T * F , $
+T -> · T * F , +
+T -> · T / F , +
+T -> · T * F , -
+T -> · T / F , -
+T -> · F , *
+T -> · F , /
+T -> · F , $
+T -> · F , +
+T -> · F , -
+Item Set 1:
+T -> F . , -
+T -> F . , +
+T -> F . , $
+T -> F . , *
+T -> F . , /
+Item Set 2:
+E -> E · - T , +
+E -> E · - T , -
+E -> E · + T , -
+E -> E · - T , $
+E -> E · + T , $
+E -> E · + T , +
+E' -> E . , $
+Item Set 3:
+E -> T . , -
+E -> T . , $
+E -> T . , +
+T -> T · / F , -
+T -> T · * F , -
+T -> T · / F , +
+T -> T · * F , +
+T -> T · * F , $
+T -> T · / F , $
+T -> T · * F , /
+T -> T · / F , *
+T -> T · * F , *
+T -> T · / F , /
+Item Set 4:
+T -> · T / F , +
+T -> · T * F , +
+T -> · T * F , *
+T -> · T / F , *
+T -> · T * F , /
+T -> · T / F , /
+T -> · T * F , )
+T -> · T / F , )
+T -> · T * F , -
+T -> · T / F , -
+E -> · T , +
+E -> · T , -
+E -> · T , )
+F -> ( · E ) , +
+F -> ( · E ) , -
+F -> ( · E ) , $
+F -> ( · E ) , /
+F -> ( · E ) , *
+E -> · E - T , +
+E -> · E + T , +
+E -> · E - T , -
+E -> · E + T , -
+E -> · E - T , )
+E -> · E + T , )
+T -> · F , +
+T -> · F , *
+T -> · F , /
+T -> · F , )
+T -> · F , -
+F -> · ( E ) , )
+F -> · ( E ) , /
+F -> · ( E ) , *
+F -> · ( E ) , +
+F -> · ( E ) , -
+F -> · num , )
+F -> · num , -
+F -> · num , /
+F -> · num , *
+F -> · num , +
+Item Set 5:
+F -> num . , *
+F -> num . , /
+F -> num . , $
+F -> num . , -
+F -> num . , +
+Item Set 6:
+T -> · T / F , $
+T -> · T * F , $
+T -> · T / F , *
+T -> · T * F , *
+T -> · T / F , +
+T -> · T * F , +
+T -> · T * F , -
+T -> · T / F , -
+T -> · T * F , /
+T -> · T / F , /
+T -> · F , $
+T -> · F , *
+T -> · F , +
+T -> · F , -
+T -> · F , /
+E -> E + · T , +
+E -> E + · T , -
+E -> E + · T , $
+F -> · num , $
+F -> · num , /
+F -> · num , *
+F -> · num , -
+F -> · num , +
+F -> · ( E ) , $
+F -> · ( E ) , /
+F -> · ( E ) , *
+F -> · ( E ) , -
+F -> · ( E ) , +
+Item Set 7:
+T -> · T / F , -
+T -> · T * F , -
+T -> · T / F , *
+T -> · T * F , *
+T -> · T / F , $
+T -> · T * F , $
+T -> · T * F , +
+T -> · T / F , +
+T -> · T * F , /
+T -> · T / F , /
+T -> · F , -
+T -> · F , *
+T -> · F , $
+T -> · F , +
+T -> · F , /
+E -> E - · T , $
+E -> E - · T , +
+E -> E - · T , -
+F -> · num , -
+F -> · num , /
+F -> · num , *
+F -> · num , +
+F -> · num , $
+F -> · ( E ) , -
+F -> · ( E ) , /
+F -> · ( E ) , *
+F -> · ( E ) , +
+F -> · ( E ) , $
+Item Set 8:
+F -> · num , *
+F -> · num , $
+F -> · num , -
+F -> · num , +
+F -> · num , /
+T -> T / · F , +
+T -> T / · F , -
+T -> T / · F , $
+T -> T / · F , *
+T -> T / · F , /
+F -> · ( E ) , *
+F -> · ( E ) , $
+F -> · ( E ) , -
+F -> · ( E ) , +
+F -> · ( E ) , /
+Item Set 9:
+F -> · num , /
+F -> · num , $
+F -> · num , -
+F -> · num , +
+F -> · num , *
+T -> T * · F , +
+T -> T * · F , -
+T -> T * · F , $
+T -> T * · F , /
+T -> T * · F , *
+F -> · ( E ) , /
+F -> · ( E ) , $
+F -> · ( E ) , -
+F -> · ( E ) , +
+F -> · ( E ) , *
+Item Set 10:
+T -> F . , -
+T -> F . , )
+T -> F . , /
+T -> F . , +
+T -> F . , *
+Item Set 11:
+F -> ( E · ) , -
+F -> ( E · ) , +
+F -> ( E · ) , $
+F -> ( E · ) , /
+F -> ( E · ) , *
+E -> E · + T , )
+E -> E · - T , )
+E -> E · + T , -
+E -> E · - T , -
+E -> E · + T , +
+E -> E · - T , +
+Item Set 12:
+E -> T . , )
+E -> T . , -
+E -> T . , +
+T -> T · / F , -
+T -> T · * F , -
+T -> T · / F , )
+T -> T · * F , )
+T -> T · * F , +
+T -> T · / F , +
+T -> T · * F , *
+T -> T · / F , *
+T -> T · * F , /
+T -> T · / F , /
+Item Set 13:
+T -> · T / F , +
+T -> · T * F , +
+T -> · T * F , *
+T -> · T / F , *
+T -> · T * F , /
+T -> · T / F , /
+T -> · T * F , )
+T -> · T / F , )
+T -> · T * F , -
+T -> · T / F , -
+E -> · T , +
+E -> · T , -
+E -> · T , )
+F -> ( · E ) , /
+F -> ( · E ) , )
+F -> ( · E ) , *
+F -> ( · E ) , +
+F -> ( · E ) , -
+E -> · E - T , +
+E -> · E + T , +
+E -> · E - T , -
+E -> · E + T , -
+E -> · E - T , )
+E -> · E + T , )
+T -> · F , +
+T -> · F , *
+T -> · F , /
+T -> · F , )
+T -> · F , -
+F -> · ( E ) , )
+F -> · ( E ) , /
+F -> · ( E ) , *
+F -> · ( E ) , +
+F -> · ( E ) , -
+F -> · num , )
+F -> · num , -
+F -> · num , /
+F -> · num , *
+F -> · num , +
+Item Set 14:
+F -> num . , +
+F -> num . , *
+F -> num . , /
+F -> num . , )
+F -> num . , -
+Item Set 15:
+E -> E + T . , $
+E -> E + T . , -
+E -> E + T . , +
+T -> T · / F , /
+T -> T · * F , /
+T -> T · / F , -
+T -> T · * F , -
+T -> T · * F , $
+T -> T · / F , $
+T -> T · / F , *
+T -> T · * F , *
+T -> T · / F , +
+T -> T · * F , +
+Item Set 16:
+E -> E - T . , -
+E -> E - T . , +
+E -> E - T . , $
+T -> T · / F , /
+T -> T · * F , /
+T -> T · / F , +
+T -> T · * F , +
+T -> T · * F , -
+T -> T · / F , -
+T -> T · / F , *
+T -> T · * F , *
+T -> T · / F , $
+T -> T · * F , $
+Item Set 17:
+T -> T / F . , /
+T -> T / F . , *
+T -> T / F . , $
+T -> T / F . , +
+T -> T / F . , -
+Item Set 18:
+T -> T * F . , *
+T -> T * F . , /
+T -> T * F . , $
+T -> T * F . , +
+T -> T * F . , -
+Item Set 19:
+F -> ( E ) . , *
+F -> ( E ) . , /
+F -> ( E ) . , $
+F -> ( E ) . , -
+F -> ( E ) . , +
+Item Set 20:
+T -> · T / F , -
+T -> · T * F , -
+T -> · T / F , *
+T -> · T * F , *
+T -> · T / F , +
+T -> · T * F , +
+T -> · T * F , )
+T -> · T / F , )
+T -> · T * F , /
+T -> · T / F , /
+T -> · F , -
+T -> · F , *
+T -> · F , +
+T -> · F , )
+T -> · F , /
+E -> E + · T , +
+E -> E + · T , )
+E -> E + · T , -
+F -> · num , -
+F -> · num , /
+F -> · num , *
+F -> · num , )
+F -> · num , +
+F -> · ( E ) , -
+F -> · ( E ) , /
+F -> · ( E ) , *
+F -> · ( E ) , )
+F -> · ( E ) , +
+Item Set 21:
+T -> · T / F , -
+T -> · T * F , -
+T -> · T / F , *
+T -> · T * F , *
+T -> · T / F , +
+T -> · T * F , +
+T -> · T * F , )
+T -> · T / F , )
+T -> · T * F , /
+T -> · T / F , /
+T -> · F , -
+T -> · F , *
+T -> · F , +
+T -> · F , )
+T -> · F , /
+E -> E - · T , +
+E -> E - · T , )
+E -> E - · T , -
+F -> · num , -
+F -> · num , /
+F -> · num , *
+F -> · num , )
+F -> · num , +
+F -> · ( E ) , -
+F -> · ( E ) , /
+F -> · ( E ) , *
+F -> · ( E ) , )
+F -> · ( E ) , +
+Item Set 22:
+F -> · num , *
+F -> · num , +
+F -> · num , -
+F -> · num , )
+F -> · num , /
+T -> T / · F , )
+T -> T / · F , -
+T -> T / · F , +
+T -> T / · F , *
+T -> T / · F , /
+F -> · ( E ) , *
+F -> · ( E ) , +
+F -> · ( E ) , -
+F -> · ( E ) , )
+F -> · ( E ) , /
+Item Set 23:
+F -> · num , *
+F -> · num , +
+F -> · num , -
+F -> · num , )
+F -> · num , /
+T -> T * · F , )
+T -> T * · F , -
+T -> T * · F , +
+T -> T * · F , *
+T -> T * · F , /
+F -> · ( E ) , *
+F -> · ( E ) , +
+F -> · ( E ) , -
+F -> · ( E ) , )
+F -> · ( E ) , /
+Item Set 24:
+F -> ( E · ) , )
+F -> ( E · ) , /
+F -> ( E · ) , *
+F -> ( E · ) , +
+F -> ( E · ) , -
+E -> E · + T , )
+E -> E · - T , )
+E -> E · + T , -
+E -> E · - T , -
+E -> E · + T , +
+E -> E · - T , +
+Item Set 25:
+E -> E + T . , -
+E -> E + T . , )
+E -> E + T . , +
+T -> T · / F , /
+T -> T · * F , /
+T -> T · / F , )
+T -> T · * F , )
+T -> T · * F , -
+T -> T · / F , -
+T -> T · / F , *
+T -> T · * F , *
+T -> T · / F , +
+T -> T · * F , +
+Item Set 26:
+E -> E - T . , -
+E -> E - T . , )
+E -> E - T . , +
+T -> T · / F , /
+T -> T · * F , /
+T -> T · / F , )
+T -> T · * F , )
+T -> T · * F , -
+T -> T · / F , -
+T -> T · / F , *
+T -> T · * F , *
+T -> T · / F , +
+T -> T · * F , +
+Item Set 27:
+T -> T / F . , /
+T -> T / F . , *
+T -> T / F . , +
+T -> T / F . , )
+T -> T / F . , -
+Item Set 28:
+T -> T * F . , /
+T -> T * F . , *
+T -> T * F . , +
+T -> T * F . , )
+T -> T * F . , -
+Item Set 29:
+F -> ( E ) . , -
+F -> ( E ) . , +
+F -> ( E ) . , *
+F -> ( E ) . , )
+F -> ( E ) . , /
+
+LR1 Table:
+                                               action                                                  goto             
+    status|         )         /         (       num         -         +         $         *|         T         F         E
+         0|                            S4        S5                                        |         3         1         2
+         1|              R T->F                        R T->F    R T->F    R T->F    R T->F|                              
+         2|                                                S7        S6       ACC          |                              
+         3|                  S8                        R E->T    R E->T    R E->T        S9|                              
+         4|                           S13       S14                                        |        12        10        11
+         5|            R F->num                      R F->num  R F->num  R F->num  R F->num|                              
+         6|                            S4        S5                                        |        15         1          
+         7|                            S4        S5                                        |        16         1          
+         8|                            S4        S5                                        |                  17          
+         9|                            S4        S5                                        |                  18          
+        10|    R T->F    R T->F                        R T->F    R T->F              R T->F|                              
+        11|       S19                                     S21       S20                    |                              
+        12|    R E->T       S22                        R E->T    R E->T                 S23|                              
+        13|                           S13       S14                                        |        12        10        24
+        14|  R F->num  R F->num                      R F->num  R F->num            R F->num|                              
+        15|                  S8                      R E->E+T  R E->E+T  R E->E+T        S9|                              
+        16|                  S8                      R E->E-T  R E->E-T  R E->E-T        S9|                              
+        17|            R T->T/F                      R T->T/F  R T->T/F  R T->T/F  R T->T/F|                              
+        18|            R T->T*F                      R T->T*F  R T->T*F  R T->T*F  R T->T*F|                              
+        19|            R F->(E)                      R F->(E)  R F->(E)  R F->(E)  R F->(E)|                              
+        20|                           S13       S14                                        |        25        10          
+        21|                           S13       S14                                        |        26        10          
+        22|                           S13       S14                                        |                  27          
+        23|                           S13       S14                                        |                  28          
+        24|       S29                                     S21       S20                    |                              
+        25|  R E->E+T       S22                      R E->E+T  R E->E+T                 S23|                              
+        26|  R E->E-T       S22                      R E->E-T  R E->E-T                 S23|                              
+        27|  R T->T/F  R T->T/F                      R T->T/F  R T->T/F            R T->T/F|                              
+        28|  R T->T*F  R T->T*F                      R T->T*F  R T->T*F            R T->T*F|                              
+        29|  R F->(E)  R F->(E)                      R F->(E)  R F->(E)            R F->(E)|                              
+
+Process:
+Parse  (3.3-2)*+(*+2  :
+$0                                |                     (3.3-2)*+(*+2$|shift 4                           
+$0(4                              |                      3.3-2)*+(*+2$|shift 14                          
+$0(4num14                         |                         -2)*+(*+2$|reduce by F->num                  
+$0(4F10                           |                         -2)*+(*+2$|reduce by T->F                    
+$0(4T12                           |                         -2)*+(*+2$|reduce by E->T                    
+$0(4E11                           |                         -2)*+(*+2$|shift 21                          
+$0(4E11-21                        |                          2)*+(*+2$|shift 14                          
+$0(4E11-21num14                   |                           )*+(*+2$|reduce by F->num                  
+$0(4E11-21F10                     |                           )*+(*+2$|reduce by T->F                    
+$0(4E11-21T26                     |                           )*+(*+2$|reduce by E->E-T                  
+$0(4E11                           |                           )*+(*+2$|shift 19                          
+$0(4E11)19                        |                            *+(*+2$|reduce by F->(E)                  
+$0F1                              |                            *+(*+2$|reduce by T->F                    
+$0T3                              |                            *+(*+2$|shift 9                           
+$0T3*9                            |                             +(*+2$|'+' is missmatching.              
+
+Parse  (3.5/(2-4*.8/2)-2*3.+(2/(2)-2))+2  :
+$0                                | (3.5/(2-4*.8/2)-2*3.+(2/(2)-2))+2$|shift 4                           
+$0(4                              |  3.5/(2-4*.8/2)-2*3.+(2/(2)-2))+2$|shift 14                          
+$0(4num14                         |     /(2-4*.8/2)-2*3.+(2/(2)-2))+2$|reduce by F->num                  
+$0(4F10                           |     /(2-4*.8/2)-2*3.+(2/(2)-2))+2$|reduce by T->F                    
+$0(4T12                           |     /(2-4*.8/2)-2*3.+(2/(2)-2))+2$|shift 22                          
+$0(4T12/22                        |      (2-4*.8/2)-2*3.+(2/(2)-2))+2$|shift 13                          
+$0(4T12/22(13                     |       2-4*.8/2)-2*3.+(2/(2)-2))+2$|shift 14                          
+$0(4T12/22(13num14                |        -4*.8/2)-2*3.+(2/(2)-2))+2$|reduce by F->num                  
+$0(4T12/22(13F10                  |        -4*.8/2)-2*3.+(2/(2)-2))+2$|reduce by T->F                    
+$0(4T12/22(13T12                  |        -4*.8/2)-2*3.+(2/(2)-2))+2$|reduce by E->T                    
+$0(4T12/22(13E24                  |        -4*.8/2)-2*3.+(2/(2)-2))+2$|shift 21                          
+$0(4T12/22(13E24-21               |         4*.8/2)-2*3.+(2/(2)-2))+2$|shift 14                          
+$0(4T12/22(13E24-21num14          |          *.8/2)-2*3.+(2/(2)-2))+2$|reduce by F->num                  
+$0(4T12/22(13E24-21F10            |          *.8/2)-2*3.+(2/(2)-2))+2$|reduce by T->F                    
+$0(4T12/22(13E24-21T26            |          *.8/2)-2*3.+(2/(2)-2))+2$|shift 23                          
+$0(4T12/22(13E24-21T26*23         |           .8/2)-2*3.+(2/(2)-2))+2$|shift 14                          
+$0(4T12/22(13E24-21T26*23num14    |             /2)-2*3.+(2/(2)-2))+2$|reduce by F->num                  
+$0(4T12/22(13E24-21T26*23F28      |             /2)-2*3.+(2/(2)-2))+2$|reduce by T->T*F                  
+$0(4T12/22(13E24-21T26            |             /2)-2*3.+(2/(2)-2))+2$|shift 22                          
+$0(4T12/22(13E24-21T26/22         |              2)-2*3.+(2/(2)-2))+2$|shift 14                          
+$0(4T12/22(13E24-21T26/22num14    |               )-2*3.+(2/(2)-2))+2$|reduce by F->num                  
+$0(4T12/22(13E24-21T26/22F27      |               )-2*3.+(2/(2)-2))+2$|reduce by T->T/F                  
+$0(4T12/22(13E24-21T26            |               )-2*3.+(2/(2)-2))+2$|reduce by E->E-T                  
+$0(4T12/22(13E24                  |               )-2*3.+(2/(2)-2))+2$|shift 29                          
+$0(4T12/22(13E24)29               |                -2*3.+(2/(2)-2))+2$|reduce by F->(E)                  
+$0(4T12/22F27                     |                -2*3.+(2/(2)-2))+2$|reduce by T->T/F                  
+$0(4T12                           |                -2*3.+(2/(2)-2))+2$|reduce by E->T                    
+$0(4E11                           |                -2*3.+(2/(2)-2))+2$|shift 21                          
+$0(4E11-21                        |                 2*3.+(2/(2)-2))+2$|shift 14                          
+$0(4E11-21num14                   |                  *3.+(2/(2)-2))+2$|reduce by F->num                  
+$0(4E11-21F10                     |                  *3.+(2/(2)-2))+2$|reduce by T->F                    
+$0(4E11-21T26                     |                  *3.+(2/(2)-2))+2$|shift 23                          
+$0(4E11-21T26*23                  |                   3.+(2/(2)-2))+2$|shift 14                          
+$0(4E11-21T26*23num14             |                     +(2/(2)-2))+2$|reduce by F->num                  
+$0(4E11-21T26*23F28               |                     +(2/(2)-2))+2$|reduce by T->T*F                  
+$0(4E11-21T26                     |                     +(2/(2)-2))+2$|reduce by E->E-T                  
+$0(4E11                           |                     +(2/(2)-2))+2$|shift 20                          
+$0(4E11+20                        |                      (2/(2)-2))+2$|shift 13                          
+$0(4E11+20(13                     |                       2/(2)-2))+2$|shift 14                          
+$0(4E11+20(13num14                |                        /(2)-2))+2$|reduce by F->num                  
+$0(4E11+20(13F10                  |                        /(2)-2))+2$|reduce by T->F                    
+$0(4E11+20(13T12                  |                        /(2)-2))+2$|shift 22                          
+$0(4E11+20(13T12/22               |                         (2)-2))+2$|shift 13                          
+$0(4E11+20(13T12/22(13            |                          2)-2))+2$|shift 14                          
+$0(4E11+20(13T12/22(13num14       |                           )-2))+2$|reduce by F->num                  
+$0(4E11+20(13T12/22(13F10         |                           )-2))+2$|reduce by T->F                    
+$0(4E11+20(13T12/22(13T12         |                           )-2))+2$|reduce by E->T                    
+$0(4E11+20(13T12/22(13E24         |                           )-2))+2$|shift 29                          
+$0(4E11+20(13T12/22(13E24)29      |                            -2))+2$|reduce by F->(E)                  
+$0(4E11+20(13T12/22F27            |                            -2))+2$|reduce by T->T/F                  
+$0(4E11+20(13T12                  |                            -2))+2$|reduce by E->T                    
+$0(4E11+20(13E24                  |                            -2))+2$|shift 21                          
+$0(4E11+20(13E24-21               |                             2))+2$|shift 14                          
+$0(4E11+20(13E24-21num14          |                              ))+2$|reduce by F->num                  
+$0(4E11+20(13E24-21F10            |                              ))+2$|reduce by T->F                    
+$0(4E11+20(13E24-21T26            |                              ))+2$|reduce by E->E-T                  
+$0(4E11+20(13E24                  |                              ))+2$|shift 29                          
+$0(4E11+20(13E24)29               |                               )+2$|reduce by F->(E)                  
+$0(4E11+20F10                     |                               )+2$|reduce by T->F                    
+$0(4E11+20T25                     |                               )+2$|reduce by E->E+T                  
+$0(4E11                           |                               )+2$|shift 19                          
+$0(4E11)19                        |                                +2$|reduce by F->(E)                  
+$0F1                              |                                +2$|reduce by T->F                    
+$0T3                              |                                +2$|reduce by E->T                    
+$0E2                              |                                +2$|shift 6                           
+$0E2+6                            |                                 2$|shift 5                           
+$0E2+6num5                        |                                  $|reduce by F->num                  
+$0E2+6F1                          |                                  $|reduce by T->F                    
+$0E2+6T15                         |                                  $|reduce by E->E+T                  
+$0E2                              |                                  $|accept                            
+

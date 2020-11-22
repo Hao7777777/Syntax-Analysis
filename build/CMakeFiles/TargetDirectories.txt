@@ -1,0 +1,3 @@
+D:/Compiler_Principles/analysis/syntax/build/CMakeFiles/syntax.dir
+D:/Compiler_Principles/analysis/syntax/build/CMakeFiles/edit_cache.dir
+D:/Compiler_Principles/analysis/syntax/build/CMakeFiles/rebuild_cache.dir

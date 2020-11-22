@@ -1,0 +1,32 @@
+[
+{
+  "directory": "D:/Compiler_Principles/analysis/syntax/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -g -Wall -Wextra -std=c++17 -o CMakeFiles\\syntax.dir\\src\\LL1.cpp.obj -c D:\\Compiler_Principles\\analysis\\syntax\\src\\LL1.cpp",
+  "file": "D:/Compiler_Principles/analysis/syntax/src/LL1.cpp"
+},
+{
+  "directory": "D:/Compiler_Principles/analysis/syntax/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -g -Wall -Wextra -std=c++17 -o CMakeFiles\\syntax.dir\\src\\LR1.cpp.obj -c D:\\Compiler_Principles\\analysis\\syntax\\src\\LR1.cpp",
+  "file": "D:/Compiler_Principles/analysis/syntax/src/LR1.cpp"
+},
+{
+  "directory": "D:/Compiler_Principles/analysis/syntax/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -g -Wall -Wextra -std=c++17 -o CMakeFiles\\syntax.dir\\src\\grammar.cpp.obj -c D:\\Compiler_Principles\\analysis\\syntax\\src\\grammar.cpp",
+  "file": "D:/Compiler_Principles/analysis/syntax/src/grammar.cpp"
+},
+{
+  "directory": "D:/Compiler_Principles/analysis/syntax/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -g -Wall -Wextra -std=c++17 -o CMakeFiles\\syntax.dir\\src\\lexical.cpp.obj -c D:\\Compiler_Principles\\analysis\\syntax\\src\\lexical.cpp",
+  "file": "D:/Compiler_Principles/analysis/syntax/src/lexical.cpp"
+},
+{
+  "directory": "D:/Compiler_Principles/analysis/syntax/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -g -Wall -Wextra -std=c++17 -o CMakeFiles\\syntax.dir\\src\\main.cpp.obj -c D:\\Compiler_Principles\\analysis\\syntax\\src\\main.cpp",
+  "file": "D:/Compiler_Principles/analysis/syntax/src/main.cpp"
+},
+{
+  "directory": "D:/Compiler_Principles/analysis/syntax/build",
+  "command": "C:\\mingw64\\bin\\g++.exe   -g -g -Wall -Wextra -std=c++17 -o CMakeFiles\\syntax.dir\\src\\recursive.cpp.obj -c D:\\Compiler_Principles\\analysis\\syntax\\src\\recursive.cpp",
+  "file": "D:/Compiler_Principles/analysis/syntax/src/recursive.cpp"
+}
+]

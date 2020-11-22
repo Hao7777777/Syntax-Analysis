@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(syntax)
+set(CXX_STANDARD 17)
+add_compile_options(-g -Wall -Wextra -std=c++17)
+aux_source_directory(./src DIR_SRCS)
+add_executable(syntax ${DIR_SRCS})
